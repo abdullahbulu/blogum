@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+    <title>Blog Site</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Draco is free PSD &amp; HTML template by @flamekaizar">
+    <meta name="author" content="Afnizar Nur Ghifari">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href={% static "default/assets/css/kube.min.css" %} />
+    <link rel="stylesheet" href={% static "default/assets/css/font-awesome.min.css" %} />
+    <link rel="stylesheet" href={% static "default/assets/css/custom.min.css" %} />
+    <link rel="stylesheet" href={% static "default/assets/css/custom.css" %} />
+    <link rel="stylesheet" href={% static "default/assets/css/kube.css" %} />
+
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="main-nav">
+    <div class="container">
+      <header class="group top-nav">
+        <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+            <span class="logo">TEST</span>
+        </div>
+          <nav id="navbar-1" class="navbar item-nav">
+            <ul>
+                <li><a href="/home/">Home</a></li>
+                <li><a href="/programs/">Programs</a></li>
+                <li><a href="/technologies/">Technologies</a></li>     
+                <li><a href="/about/">About</a></li>
+                <li><a href="/design/">Design</a>
+                <li><a href="/logout/">Logout!</a></li>
+            </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <div id="about-us" class="clear">
+      <section id="statements" class="clear">
+        <div class="fl_right">  
+        </div>
+      </section>
+      <section id="tabcontainer" class="clear">
+        <div class="three_quarter">
+          <div id="tabs-1" class="tabcontainer clear">
+            <center>
+              <img class="imgl" src="/{{aboutt.foto }}" alt="">
+              </br></br>
+              <strong><b>Ad: </b></strong>{{aboutt.isim}}</br><hr>
+              <strong><b>Soyad: </b></strong>{{aboutt.soy_isim}}</br><hr>
+              <strong><b>Bölüm: </b></strong>{{aboutt.bolum}}</br><hr>
+              <strong><b>İletisim: </b></strong>{{aboutt.tel}}</br><hr>
+              <strong><b>Adres: </b></strong>{{aboutt.adres}}<hr>
+            </center>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

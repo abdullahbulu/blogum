@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+    <title>Blog Site</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Draco is free PSD &amp; HTML template by @flamekaizar">
+    <meta name="author" content="Afnizar Nur Ghifari">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href={% static "default/assets/css/kube.min.css" %} />
+    <link rel="stylesheet" href={% static "default/assets/css/font-awesome.min.css" %} />
+    <link rel="stylesheet" href={% static "default/assets/css/custom.min.css" %} />
+    <link rel="stylesheet" href={% static "default/assets/css/custom.css" %} />
+    <link rel="stylesheet" href={% static "default/assets/css/kube.css" %} />
+
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">TEST</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav">
+				    <ul>
+				        <li><a href="/home/">Home</a></li>
+				        <li><a href="/programs/">Programs</a></li>
+				        <li><a href="/technologies/">Technologies</a></li>     
+				        <li><a href="/about/">About</a></li>
+				        <li><a href="/design/">Design</a>
+				        <li><a href="/logout/">Logout!</a></li>
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<!-- Introduction -->
+	<div class="intro section" id="about">
+		<div class="container">
+			<div class="units-row units-split wrap">
+				<div class="unit-20">
+					<img src={% static "default/images/abdullah.jpg" %} alt="Avatar">
+				</div>
+			
+			</div>
+			{% for field in programss %}
+			<h2>{{field.baslik}}</h2></br><hr>
+			<p>{{field.tarih}}</p></br>
+			<p>{{field.text}}</p></br>	
+			{% endfor %}
+		</div>
+	</div>
+
+	<!-- Quote -->
+	<footer>
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-50">
+			    	<p>Developer Abdullah Bulu and Sefa Tamak</p>
+			    </div>
+			    <div class="unit-50">
+					<ul class="social list-flat right">
+						<li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="http://dribbble.com"><i class="fa fa-dribbble"></i></a></li>
+						<li><a href="http://behance.com"><i class="fa fa-behance"></i></a></li>
+					</ul>
+			    </div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src={% static "default/assets/js/jquery.min.js" %}></script>
+	<script src={% static "default/assets/js/typed.min.js" %}></script>
+    <script src={% static "default/assets/js/kube.min.js" %}></script>
+    <script src={% static "default/assets/js/site.js" %}></script>
+    <script src={% static "default/assets/js/accordion.js" %}></script>
+    <script src={% static "default/assets/js/autocomplete.js" %}></script>
+    <script src={% static "default/assets/js/dropdown.js" %}></script>
+    <script src={% static "default/assets/js/buttons.js" %}></script>
+    <script src={% static "default/assets/js/check-all.js" %}></script>
+    <script src={% static "default/assets/js/filterbox.js" %}></script>
+    <script src={% static "default/assets/js/infinite-scroll.js" %}></script>
+    <script src={% static "default/assets/js/kube.js" %}></script>
+    <script src={% static "default/assets/js/message.js" %}></script>
+    <script src={% static "default/assets/js/validate.js" %}></script>
+    <script src={% static "default/assets/js/upload.js" %}></script>
+    <script src={% static "default/assets/js/tooltip.js" %}></script>
+    <script src={% static "default/assets/js/textfit.js" %}></script>
+    <script src={% static "default/assets/js/tabs.js" %}></script>
+    <script src={% static "default/assets/js/site.js" %}></script>
+    <script src={% static "default/assets/js/progress.js" %}></script>
+    <script src={% static "default/assets/js/navigation-toggle.js" %}></script>
+    <script src={% static "default/assets/js/navigation-fixed.js" %}></script>
+    <script src={% static "default/assets/js/modal.js" %}></script>
+    <script src={% static "default/assets/js/livesearch.js" %}></script>
+    <script src={% static "default/assets/js/message.js" %}></script>
+<!--
+    <script>
+		function newTyped(){}$(function(){$("#typed").typed({
+		// Change to edit type effect
+		strings: ["far northern sky", "your galaxy", "everywhere"],
+
+		typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+    </script> -->
+</body>
+</html>
